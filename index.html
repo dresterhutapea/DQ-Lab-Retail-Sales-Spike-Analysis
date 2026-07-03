@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Tren Penjualan dan Sales Spike</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f6f8fa;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            color: #24292e;
+        }
+        
+        h1 {
+            font-size: 32px;
+            border-bottom: 3px solid #0366d6;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin-top: 32px;
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+        
+        p, li {
+            margin-bottom: 12px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+        
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .notebook-link {
+            background: #f1f8ff;
+            border-left: 4px solid #0366d6;
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 4px;
+        }
+        
+        .recommendation {
+            background: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        
+        code {
+            background: #f6f8fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'SFMono-Regular', 'Courier New', monospace;
+            font-size: 13px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 15px;
+            background: #0366d6;
+            color: white !important;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            background: #0256c7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Analisis Tren Penjualan dan Identifikasi Sales Spike</h1>
+        <p>Optimasi Strategi Bisnis Retail</p>
+        
+        <h2>📌 Ringkasan Proyek</h2>
+        <p>Analisis ini bertujuan untuk mengevaluasi tren performa penjualan produk berdasarkan data transaksi historis perusahaan. Dengan melakukan penggabungan data transaksi (tbl_transaction) dan data produk, kami mengidentifikasi pola penjualan, anomali musiman, dan peluang optimasi bisnis.</p>
+        
+        <div class="notebook-link">
+            <strong>📓 Lembar Kerja Jupyter Notebook:</strong><br>
+            <a href="https://github.com/dresterhutapea/DQ-Lab-Retail-Sales-Spike-Analysis/blob/main/Identifikasi%20Spike.ipynb" target="_blank">Buka File Analisis Lengkap</a>
+        </div>
+        
+        <h2>🛠️ Langkah Teknis & Metodologi</h2>
+        <ul>
+            <li><strong>Data Preparation & Feature Engineering:</strong> Mengubah data tanggal transaksi menjadi format periode bulan (<code>to_period('M')</code>) dan mengembalikannya ke format timestamp untuk kebutuhan visualisasi.</li>
+            <li><strong>Agregasi & Filtering:</strong> Menggunakan fungsi <code>.groupby()</code> dan <code>.nlargest(5)</code> untuk menyaring 5 produk dengan volume penjualan tertinggi.</li>
+            <li><strong>Data Visualization:</strong> Menggunakan library seaborn dan matplotlib untuk membuat line plot yang interaktif lengkap dengan legenda posisi eksternal agar grafik scannable dan rapi.</li>
+        </ul>
+        
+        <h2>📈 Hasil dan Analisis (Insights)</h2>
+        <ul>
+            <li><strong>Dominasi Produk:</strong> Dari 5 produk teratas yang ditampilkan, <strong>Sticky Notes DQ Lab</strong> secara konsisten menunjukkan volume unit terjual yang paling tinggi dibandingkan produk lainnya sepanjang periode pengamatan.</li>
+            <li><strong>Identifikasi Sales Spike:</strong> Terjadi lonjakan penjualan yang sangat signifikan pada <strong>September 2024 hingga Maret 2025</strong> untuk produk <strong>Sticky Notes DQ Lab</strong>.</li>
+            <li><strong>Pola Anomali / Musiman:</strong> Setelah mencapai titik puncak, tren penjualan menunjukkan penurunan kembali ke titik normal pada bulan Agustus 2025, mengindikasikan pola musiman.</li>
+        </ul>
+        
+        <h2>💼 Rekomendasi Bisnis</h2>
+        
+        <h3>1. Optimasi Manajemen Inventaris (Supply Chain)</h3>
+        <div class="recommendation">
+            <p><strong>Pre-emptive Stocking:</strong> Tim operasional harus mengantisipasi sales spike berulang di masa mendatang dengan meningkatkan kapasitas stok Sticky Notes DQ Lab sebesar 20-30% setidaknya 1 bulan sebelum periode spike diperkirakan terjadi.</p>
+            <p><strong>Efisiensi Gudang:</strong> Alokasikan ruang penyimpanan utama (golden zone) di gudang untuk kategori produk Top 5 ini menjelang bulan-bulan sibuk demi mempercepat proses penyiapan barang.</p>
+        </div>
+        
+        <h3>2. Strategi Pemasaran Berbasis Momentum</h3>
+        <div class="recommendation">
+            <p><strong>Duplikasi Kampanye Sukses:</strong> Selidiki aktivitas pemasaran atau faktor eksternal yang terjadi pada rentang bulan September - Maret (musim tahun ajaran baru, promo akhir tahun, flash sale, dll).</p>
+            <p><strong>Retensi Pelanggan Pasca-Spike:</strong> Manfaatkan lonjakan basis pelanggan baru yang didapat selama periode spike untuk dimasukkan ke dalam program loyalty atau email remarketing.</p>
+        </div>
+        
+        <h3>3. Penyesuaian Strategi Harga (Pricing Strategy)</h3>
+        <div class="recommendation">
+            <p><strong>Dynamic Pricing:</strong> Pada saat volume permintaan mendekati titik spike, perusahaan dapat mempertimbangkan strategi bundling produk terlaris dengan produk yang kurang laku untuk meningkatkan revenue.</p>
+        </div>
+        
+        <a href="https://github.com/dresterhutapea/DQ-Lab-Retail-Sales-Spike-Analysis" class="back-link">← Kembali ke Repository</a>
+    </div>
+</body>
+</html>
