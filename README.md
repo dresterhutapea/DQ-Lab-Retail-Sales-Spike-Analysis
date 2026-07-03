@@ -10,6 +10,8 @@ Analisis ini bertujuan untuk mengevaluasi tren performa penjualan produk berdasa
 * **Agregasi & Filtering**: Menggunakan fungsi .groupby() dan .nlargest(5) untuk menyaring 5 produk dengan volume penjualan tertinggi.
 * **Data Visualization**: Menggunakan library seaborn dan matplotlib untuk membuat line plot yang interaktif lengkap dengan legenda posisi eksternal agar grafik scannable dan rapi.
 
+<img width="1387" height="690" alt="image" src="https://github.com/user-attachments/assets/5b13fe6f-5049-4199-8dec-c076261cd4d5" />
+
 ## **Hasil dan Analisis (Insights)**
 Berdasarkan grafik visualisasi line plot yang dihasilkan menggunakan seaborn dan matplotlib, berikut adalah beberapa poin analisis penting:
 * **Dominasi Produk**: Dari 5 produk teratas yang ditampilkan, Sticky Notes DQ Lab secara konsisten menunjukkan volume unit terjual yang paling tinggi dibandingkan produk lainnya sepanjang periode pengamatan.
