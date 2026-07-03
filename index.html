@@ -106,32 +106,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>📊 Analisis Tren Penjualan dan Identifikasi Sales Spike</h1>
+        <h1>Analisis Tren Penjualan dan Identifikasi Sales Spike</h1>
         <p>Optimasi Strategi Bisnis Retail</p>
         
-        <h2>📌 Ringkasan Proyek</h2>
+        <h2>Ringkasan Proyek</h2>
         <p>Analisis ini bertujuan untuk mengevaluasi tren performa penjualan produk berdasarkan data transaksi historis perusahaan. Dengan melakukan penggabungan data transaksi (tbl_transaction) dan data produk, kami mengidentifikasi pola penjualan, anomali musiman, dan peluang optimasi bisnis.</p>
         
         <div class="notebook-link">
-            <strong>📓 Lembar Kerja Jupyter Notebook:</strong><br>
+            <strong>Lembar Kerja Jupyter Notebook:</strong><br>
             <a href="https://github.com/dresterhutapea/DQ-Lab-Retail-Sales-Spike-Analysis/blob/main/Identifikasi%20Spike.ipynb" target="_blank">Buka File Analisis Lengkap</a>
         </div>
         
-        <h2>🛠️ Langkah Teknis & Metodologi</h2>
+        <h2>Langkah Teknis & Metodologi</h2>
         <ul>
             <li><strong>Data Preparation & Feature Engineering:</strong> Mengubah data tanggal transaksi menjadi format periode bulan (<code>to_period('M')</code>) dan mengembalikannya ke format timestamp untuk kebutuhan visualisasi.</li>
             <li><strong>Agregasi & Filtering:</strong> Menggunakan fungsi <code>.groupby()</code> dan <code>.nlargest(5)</code> untuk menyaring 5 produk dengan volume penjualan tertinggi.</li>
             <li><strong>Data Visualization:</strong> Menggunakan library seaborn dan matplotlib untuk membuat line plot yang interaktif lengkap dengan legenda posisi eksternal agar grafik scannable dan rapi.</li>
         </ul>
         
-        <h2>📈 Hasil dan Analisis (Insights)</h2>
+        <h2>Hasil dan Analisis (Insights)</h2>
         <ul>
             <li><strong>Dominasi Produk:</strong> Dari 5 produk teratas yang ditampilkan, <strong>Sticky Notes DQ Lab</strong> secara konsisten menunjukkan volume unit terjual yang paling tinggi dibandingkan produk lainnya sepanjang periode pengamatan.</li>
             <li><strong>Identifikasi Sales Spike:</strong> Terjadi lonjakan penjualan yang sangat signifikan pada <strong>September 2024 hingga Maret 2025</strong> untuk produk <strong>Sticky Notes DQ Lab</strong>.</li>
             <li><strong>Pola Anomali / Musiman:</strong> Setelah mencapai titik puncak, tren penjualan menunjukkan penurunan kembali ke titik normal pada bulan Agustus 2025, mengindikasikan pola musiman.</li>
         </ul>
         
-        <h2>💼 Rekomendasi Bisnis</h2>
+        <h2>Rekomendasi Bisnis</h2>
         
         <h3>1. Optimasi Manajemen Inventaris (Supply Chain)</h3>
         <div class="recommendation">
