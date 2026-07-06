@@ -19,17 +19,37 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #0366d6 0%, #1f6feb 100%);
+            background-image: url('https://github.com/user-attachments/assets/5b13fe6f-5049-4199-8dec-c076261cd4d5');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: white;
-            padding: 60px 20px;
+            padding: 40px 20px;
             text-align: center;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
         }
         
         .header h1 {
             font-size: 32px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             border-bottom: none;
             padding-bottom: 0;
             color: white;
@@ -132,8 +152,10 @@
 </head>
 <body>
     <div class="header">
-        <h1>Analisis Tren Penjualan dan Identifikasi Sales Spike</h1>
-        <p>oleh: Ester Hutapea</p>
+        <div class="header-content">
+            <h1>Analisis Tren Penjualan dan Identifikasi <i>Sales Spike</i></h1>
+            <p>oleh: Ester Hutapea</p>
+        </div>
     </div>
     
     <div class="container">
