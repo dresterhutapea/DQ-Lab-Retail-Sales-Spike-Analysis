@@ -1,3 +1,5 @@
+<img width="1387" height="690" alt="image" src=https://photos.app.goo.gl/WamW9cjKVgWa8yuf7/>
+
 # **Analisis Tren Penjualan dan Identifikasi Sales Spike untuk Optimasi Strategi Bisnis Retail**
 
 ## **Ringkasan Proyek (*Executive Summary*)**
