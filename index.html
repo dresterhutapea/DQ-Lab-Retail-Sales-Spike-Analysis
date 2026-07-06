@@ -19,7 +19,7 @@
         }
         
         .header {
-            background-image: url('https://photos.app.goo.gl/WamW9cjKVgWa8yuf7');
+            background-image: url('https://raw.githubusercontent.com/dresterhutapea/DQ-Lab-Retail-Sales-Spike-Analysis/main/header%20sales%20spike.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -160,18 +160,18 @@
     
     <div class="container">
         <h2>Ringkasan Proyek</h2>
-        <p>Analisis ini bertujuan untuk mengevaluasi tren performa penjualan produk berdasarkan data transaksi historis perusahaan. Dengan melakukan penggabungan data transaksi (tbl_transaction) dan d[...]
+        <p>Analisis ini bertujuan untuk mengevaluasi tren performa penjualan produk berdasarkan data transaksi historis perusahaan. Dengan melakukan penggabungan data transaksi (tbl_transaction) dan data produk (tbl_product), analisis ini mengidentifikasi pola lonjakan penjualan (sales spike) yang signifikan dan memberikan rekomendasi strategis untuk optimasi manajemen inventaris, pemasaran, dan strategi harga.</p>
         
         <div class="notebook-link">
             <strong>Lembar Kerja Jupyter Notebook:</strong><br>
-            <a href="https://nbviewer.jupyter.org/github/dresterhutapea/DQ-Lab-Retail-Sales-Spike-Analysis/blob/main/Identifikasi%20Spike.ipynb" target="_blank">📓Buka File Analisis Lengkap</a>
+            <a href="https://nbviewer.jupyter.org/github/dresterhutapea/DQ-Lab-Retail-Sales-Spike-Analysis/blob/main/Identifikasi%20Spike.ipynb" target="_blank">📓 Buka File Analisis Lengkap</a>
         </div>
         
         <h2>Langkah Teknis & Metodologi</h2>
         <ul>
-            <li><strong>Data Preparation & Feature Engineering:</strong> Mengubah data tanggal transaksi menjadi format periode bulan (<code>to_period('M')</code>) dan mengembalikannya ke format times[...]
+            <li><strong>Data Preparation & Feature Engineering:</strong> Mengubah data tanggal transaksi menjadi format periode bulan (<code>to_period('M')</code>) dan mengembalikannya ke format timestamp untuk kebutuhan visualisasi.</li>
             <li><strong>Agregasi & Filtering:</strong> Menggunakan fungsi <code>.groupby()</code> dan <code>.nlargest(5)</code> untuk menyaring 5 produk dengan volume penjualan tertinggi.</li>
-            <li><strong>Data Visualization:</strong> Menggunakan library <i>seaborn</i> dan <i>matplotlib</i> untuk membuat <i>line plot</i> yang interaktif lengkap dengan legenda posisi eksternal aga[...]
+            <li><strong>Data Visualization:</strong> Menggunakan library <i>seaborn</i> dan <i>matplotlib</i> untuk membuat <i>line plot</i> yang interaktif lengkap dengan legenda posisi eksternal agar grafik scannable dan rapi.</li>
         </ul>
         
         <img width="1387" height="690" alt="Sales Spike Visualization" src="https://github.com/user-attachments/assets/5b13fe6f-5049-4199-8dec-c076261cd4d5" class="chart-image" />
@@ -179,9 +179,9 @@
         <h2>Hasil dan Analisis (<i>Insights</i>)</h2>
         <p>Berdasarkan grafik visualisasi <i>line plot</i> yang dihasilkan menggunakan <i>seaborn</i> dan <i>matplotlib</i>, berikut adalah beberapa poin analisis penting:</p>
         <ul>
-            <li><strong>Dominasi Produk:</strong> Dari 5 produk teratas yang ditampilkan, Sticky Notes DQ Lab secara konsisten menunjukkan volume unit terjual yang paling tinggi dibandingkan produk la[...]
-            <li><strong>Identifikasi Sales Spike:</strong> Terjadi lonjakan penjualan (<i>sales spike</i>) yang sangat signifikan pada <strong>September 2024 hingga Maret 2025</strong> untuk produk <s[...]
-            <li><strong>Pola Anomali / Musiman:</strong> Setelah mencapai titik puncak tersebut, tren penjualan kedua produk menunjukkan penurunan kembali ke titik normal pada bulan Agustus 2025. Hal [...]
+            <li><strong>Dominasi Produk:</strong> Dari 5 produk teratas yang ditampilkan, Sticky Notes DQ Lab secara konsisten menunjukkan volume unit terjual yang paling tinggi dibandingkan produk lainnya sepanjang periode pengamatan.</li>
+            <li><strong>Identifikasi Sales Spike:</strong> Terjadi lonjakan penjualan (<i>sales spike</i>) yang sangat signifikan pada <strong>September 2024 hingga Maret 2025</strong> untuk produk <strong>Sticky Notes DQ Lab</strong>. Pada titik ini, volume penjualan meningkat drastis hingga mencapai lebih dari 2x lipat dari rata-rata penjualan normal.</li>
+            <li><strong>Pola Anomali / Musiman:</strong> Setelah mencapai titik puncak tersebut, tren penjualan kedua produk menunjukkan penurunan kembali ke titik normal pada bulan Agustus 2025. Hal ini mengindikasikan bahwa spike tersebut bersifat musiman atau berkaitan dengan faktor eksternal tertentu.</li>
         </ul>
         
         <h2>Rekomendasi Bisnis</h2>
@@ -189,19 +189,19 @@
         
         <h3>1. Optimasi Manajemen Inventaris (<i>Supply Chain</i>)</h3>
         <div class="recommendation">
-            <p><strong>Pre-emptive Stocking:</strong> Tim operasional harus mengantisipasi <i>sales spike</i> berulang di masa mendatang dengan meningkatkan kapasitas stok Sticky Notes DQ Lab sebesar [...]
-            <p><strong>Efisiensi Gudang:</strong> Alokasikan ruang penyimpanan utama (<i>golden zone</i>) di gudang untuk kategori produk Top 5 ini menjelang bulan-bulan sibuk demi mempercepat proses [...]
+            <p><strong>Pre-emptive Stocking:</strong> Tim operasional harus mengantisipasi <i>sales spike</i> berulang di masa mendatang dengan meningkatkan kapasitas stok Sticky Notes DQ Lab sebesar 20-30% setidaknya 1 bulan sebelum bulan September. Hal ini akan memastikan ketersediaan produk dan menghindari kehilangan penjualan akibat stock out.</p>
+            <p><strong>Efisiensi Gudang:</strong> Alokasikan ruang penyimpanan utama (<i>golden zone</i>) di gudang untuk kategori produk Top 5 ini menjelang bulan-bulan sibuk demi mempercepat proses penyiapan barang (<i>fulfillment</i>) dan mengurangi lead time pengiriman.</p>
         </div>
         
         <h3>2. Strategi Pemasaran Berbasis Momentum</h3>
         <div class="recommendation">
-            <p><strong>Duplikasi Kampanye Sukses:</strong> Selidiki aktivitas pemasaran atau faktor eksternal yang terjadi pada rentang bulan September - Maret (misalnya: musim tahun ajaran baru, prom[...]
-            <p><strong>Retensi Pelanggan Pasca-Spike:</strong> Manfaatkan lonjakan basis pelanggan baru yang didapat selama periode <i>spike</i> untuk dimasukkan ke dalam program <i>loyalty</i> atau <[...]
+            <p><strong>Duplikasi Kampanye Sukses:</strong> Selidiki aktivitas pemasaran atau faktor eksternal yang terjadi pada rentang bulan September - Maret (misalnya: musim tahun ajaran baru, promo akhir tahun, <i>flash sale</i>, atau kolaborasi brand) yang menjadi driver utama sales spike tersebut. Dokumentasikan insight ini untuk direplikasi di tahun-tahun mendatang.</p>
+            <p><strong>Retensi Pelanggan Pasca-Spike:</strong> Manfaatkan lonjakan basis pelanggan baru yang didapat selama periode <i>spike</i> untuk dimasukkan ke dalam program <i>loyalty</i> atau email remarketing agar mereka melakukan pembelian berulang di bulan-bulan setelahnya.</p>
         </div>
         
         <h3>3. Penyesuaian Strategi Harga (<i>Pricing Strategy</i>)</h3>
         <div class="recommendation">
-            <p><strong>Dynamic Pricing:</strong> Pada saat volume permintaan mendekati titik spike, perusahaan dapat mempertimbangkan strategi bundling produk terlaris (Sticky Notes / Kertas Warna) de[...]
+            <p><strong>Dynamic Pricing:</strong> Pada saat volume permintaan mendekati titik spike, perusahaan dapat mempertimbangkan strategi bundling produk terlaris (Sticky Notes / Kertas Warna) dengan produk yang kurang laku untuk meningkatkan average order value (AOV) dan mendorong cross-selling.</p>
         </div>
         
     </div>
