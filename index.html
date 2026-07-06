@@ -64,9 +64,13 @@
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px 20px 40px; /* Atas 20px, Kiri-Kanan 20px, Bawah 40px */
             background: white;
             min-height: 100vh;
+        }
+
+        .container > *:first-child {
+        margin-top: 0;
         }
         
         h1, h2, h3 {
@@ -153,7 +157,7 @@
 <body>
     <div class="header">
         <div class="header-content">
-            <h1>Analisis Tren Penjualan dan Identifikasi <i>Sales Spike</i> untuk Optimasi Strategi Bisnis Retail</h1>
+            <h1>Analisis Tren Penjualan dan Identifikasi <i>Sales Spike</i> <br>untuk Optimasi Strategi Bisnis Retail</h1>
             <p>oleh: Ester Hutapea</p>
         </div>
     </div>
